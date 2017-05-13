@@ -48,7 +48,7 @@
                         <li><a href="uvod.php?akce=filtrovat">Filtrovat</a></li>
                         <li><a href="uvod.php?akce=kontakt">Kontakt</a></li>
                         <li>
-                            <a class="btn btn-default btn-outline btn-circle" href="uvod.php?akce=odhlasit"  data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1">Odhlásit</a>
+                            <a class="btn btn-default btn-outline btn-circle" href="uvod.php?akce=odhlasit" data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1">Odhlásit</a>
                         </li>
                     </ul>
                     <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse1">

@@ -26,7 +26,6 @@ if(isset($_GET['akce'])) {
     }
 
     if($akce == "filtrovat") {
-        include "tpl/php/formular.inc.php";
         $query1 = mysqli_query($link, "SELECT DISTINCT(jednotky) FROM zbozi ORDER BY jednotky");
         $query2 = mysqli_query($link, "SELECT DISTINCT(SUBSTRING_INDEX(nazev,' ', 1)) AS typy FROM zbozi");
 
@@ -41,8 +40,7 @@ if(isset($_GET['akce'])) {
             $typy[] = $row["typy"];
         }
 
-        $_SESSION["jednotky"] = $jednotky;
-        $_SESSION["typy"] = $typy;
+        include "inc/formular.inc.php";
     }
 
     if($akce == "kontakt") {

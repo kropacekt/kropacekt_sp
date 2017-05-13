@@ -14,7 +14,7 @@
                 <select name="vyrobce" class="form-control">
                     <option value="vse">vše</option>
                     <?php
-                    foreach($_SESSION['typy'] as $typ) {
+                    foreach($typy as $typ) {
                         echo '<option value="'.$typ.'">'.$typ.'</option>';
                     }
                     ?>
@@ -29,8 +29,8 @@
                 <select name="jednotky" class="form-control">
                     <option value="vse">vše</option>
                     <?php
-                        foreach($_SESSION['jednotky'] as $jednotky) {
-                            echo '<option value="'.$jednotky.'">'.$jednotky.'</option>';
+                        foreach($jednotky as $jednotka) {
+                            echo '<option value="'.$jednotka.'">'.$jednotka.'</option>';
                         }
                     ?>
                 </select>

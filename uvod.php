@@ -6,12 +6,12 @@
  * Time: 15:29
  */
 session_start();
+require_once 'inc/connection.inc.php';
 
 //print_r($_SESSION);
 $id = $_SESSION['id'];
 $jmeno = $_SESSION['jmeno'];
 $nick = $_SESSION['nick'];
 
-include 'tpl/uvod.php';
-include "tpl/php/funkce.inc.php";
-require_once 'inc/connection.inc.php';
+include 'inc/uvod.inc.php';
+include "inc/funkce.inc.php";
