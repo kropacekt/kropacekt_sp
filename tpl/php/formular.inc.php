@@ -9,14 +9,15 @@
         </div>
 
         <div class="form-group row">
-            <label for="vyrobce" class="col-sm-2 col-form-label" >Výrobce:</label>
+            <label for="vyrobce" class="col-sm-2 col-form-label" >Typ:</label>
             <div class="col-sm-10">
-                <!--potreba z dtb substringem plnit-->
                 <select name="vyrobce" class="form-control">
-                    <option>Default select</option>
-                    <option>Default select</option>
-                    <option>Default select</option>
-                    <option>Default select</option>
+                    <option value="vse">vše</option>
+                    <?php
+                    foreach($_SESSION['typy'] as $typ) {
+                        echo '<option value="'.$typ.'">'.$typ.'</option>';
+                    }
+                    ?>
                 </select>
             </div>
         </div>
@@ -26,8 +27,9 @@
             <div class="col-sm-10">
 
                 <select name="jednotky" class="form-control">
+                    <option value="vse">vše</option>
                     <?php
-                        foreach($_SESSION['data'] as $jednotky) {
+                        foreach($_SESSION['jednotky'] as $jednotky) {
                             echo '<option value="'.$jednotky.'">'.$jednotky.'</option>';
                         }
                     ?>

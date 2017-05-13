@@ -27,14 +27,22 @@ if(isset($_GET['akce'])) {
 
     if($akce == "filtrovat") {
         include "tpl/php/formular.inc.php";
-        $query = mysqli_query($link, "SELECT DISTINCT(jednotky) FROM zbozi ORDER BY jednotky");
-        $data = [];
+        $query1 = mysqli_query($link, "SELECT DISTINCT(jednotky) FROM zbozi ORDER BY jednotky");
+        $query2 = mysqli_query($link, "SELECT DISTINCT(SUBSTRING_INDEX(nazev,' ', 1)) AS typy FROM zbozi");
 
-        while(($row=mysqli_fetch_array($query))) {
-            $data[] = $row["jednotky"];
+        $jednotky = [];
+        $typy = [];
+
+        while(($row=mysqli_fetch_array($query1))) {
+            $jednotky[] = $row["jednotky"];
         }
 
-        $_SESSION["data"] = $data;
+        while(($row=mysqli_fetch_array($query2))) {
+            $typy[] = $row["typy"];
+        }
+
+        $_SESSION["jednotky"] = $jednotky;
+        $_SESSION["typy"] = $typy;
     }
 
     if($akce == "kontakt") {
