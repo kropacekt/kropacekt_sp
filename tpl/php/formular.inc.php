@@ -10,7 +10,7 @@
 
         <div class="form-group row">
             <label for="vyrobce" class="col-sm-2 col-form-label" >Typ:</label>
-            <div class="col-sm-10">
+            <div class="col-xs-3">
                 <select name="vyrobce" class="form-control">
                     <option value="vse">vše</option>
                     <?php
@@ -24,7 +24,7 @@
 
         <div class="form-group row">
             <label for="typ" class="col-sm-2 col-form-label" >Jednotky:</label>
-            <div class="col-sm-10">
+            <div class="col-xs-3">
 
                 <select name="jednotky" class="form-control">
                     <option value="vse">vše</option>
@@ -40,7 +40,7 @@
 
         <div class="form-group row">
             <label for="slider" class="col-sm-2 col-form-label">Filtruj podle ceny:</label>
-            <div class="col-sm-10">
+            <div class="col-xs-8">
                 <div id="slider"></div>
             </div>
         </div>
@@ -49,15 +49,15 @@
 
             <legend class="col-form-legend col-sm-2">Cenové rozpětí</legend>
 
-            <div class="col-sm-10">
-                <div class="form-check">
-                    <label for="cenaOd" class="col-sm-2" >Cena od:</label>
-                    <input type="number" name="cenaOd" id="cenaOd">
+            <div class="col-sm-10 ">
+                <div class="form-check col-xs-3">
+                    <label for="cenaOd" class="col-form-label" >Cena od:</label>
+                    <input type="number" class="form-control" cols="5" name="cenaOd" id="cenaOd">
                 </div>
 
-                <div class="form-check">
-                    <label for="cenaDo" class="col-sm-2 col-form-label" >Cena do:</label>
-                    <input type="number" name="cenaDo" id="cenaDo">
+                <div class="form-check col-xs-3">
+                    <label for="cenaDo" class="col-form-label" >Cena do:</label>
+                    <input type="number" class="form-control" cols="5" name="cenaDo" id="cenaDo">
                 </div>
             </div>
 
