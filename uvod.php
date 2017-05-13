@@ -5,7 +5,7 @@
  * Date: 29.04.2017
  * Time: 15:29
  */
-session_start();
+//session_start();
 require_once 'inc/connection.inc.php';
 
 $id = $_SESSION['id'];
