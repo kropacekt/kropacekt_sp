@@ -8,7 +8,6 @@
 session_start();
 require_once 'inc/connection.inc.php';
 
-//print_r($_SESSION);
 $id = $_SESSION['id'];
 $jmeno = $_SESSION['jmeno'];
 $nick = $_SESSION['nick'];
