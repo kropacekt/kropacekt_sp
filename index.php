@@ -15,7 +15,6 @@ if(empty($_SESSION)) {
 } else {
     header('Location: uvod.php');
 }
-print_r($_SESSION);
 
 if(isset($_POST['login'])) {
     $password = md5($_POST['password']);

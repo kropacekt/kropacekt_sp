@@ -1,6 +1,6 @@
 
 <div class="container">
-    <form action="uvod.php?akce=filtrovat&filtrace=ano" method="get">
+    <form action="uvod.php?akce=filtrovat" method="post">
 
         <div class="form-group row">
             <div class="col-sm-10">
@@ -11,12 +11,12 @@
         <div class="form-group row">
             <label for="vyrobce" class="col-sm-2 col-form-label" >Typ:</label>
             <div class="col-xs-3">
-                <select name="vyrobce" class="form-control">
+                <select name="typ" class="form-control">
                     <option value="vse">vše</option>
                     <?php
-                    foreach($typy as $typ) {
-                        echo '<option value="'.$typ.'">'.$typ.'</option>';
-                    }
+                        foreach($typy as $typ) {
+                            echo '<option value="'.$typ.'">'.$typ.'</option>';
+                        }
                     ?>
                 </select>
             </div>
@@ -65,7 +65,7 @@
 
         <div class="form-group row">
             <div class="offset-sm-2 col-sm-1">
-                <button type="submit" class="btn btn-primary">Vypsat výrobky</button>
+                <button name="filtrovat" type="submit" class="btn btn-primary">Vypsat výrobky</button>
             </div>
         </div>
 
