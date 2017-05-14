@@ -20,8 +20,8 @@ if(isset($_POST['filtrovat'])) {
     $jednotky = ($_POST['jednotky'] == "vse") ? ("jednotky LIKE '%'") : ("jednotky = '".$_POST['jednotky']."'");
     $cenaOd = intval($_POST['cenaOd']);
     $cenaDo = intval($_POST['cenaDo']);
-    //$link->pre
 
+    // SQL Injection???? http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php
     $query = (mysqli_query($link, "SELECT nazev, jednotky, cena
                                             FROM zbozi
                                             WHERE nazev LIKE '$typ%'

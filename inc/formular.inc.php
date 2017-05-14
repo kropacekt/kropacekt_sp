@@ -1,6 +1,5 @@
-
 <div class="container">
-    <form action="uvod.php?akce=filtrovat" method="post">
+    <form id="filtrace" action="uvod.php?akce=filtrovat" method="post" >
 
         <div class="form-group row">
             <div class="col-sm-10">
@@ -52,12 +51,12 @@
             <div class="col-sm-10 ">
                 <div class="form-check col-xs-3">
                     <label for="cenaOd" class="col-form-label" >Cena od:</label>
-                    <input type="number" class="form-control" cols="5" name="cenaOd" id="cenaOd">
+                    <input type="number" class="form-control" name="cenaOd" id="cenaOd" value="<?php echo isset($_POST['cenaOd']) ? $_POST['cenaOd'] : '' ?>">
                 </div>
 
                 <div class="form-check col-xs-3">
                     <label for="cenaDo" class="col-form-label" >Cena do:</label>
-                    <input type="number" class="form-control" cols="5" name="cenaDo" id="cenaDo">
+                    <input type="number" class="form-control" name="cenaDo" id="cenaDo">
                 </div>
             </div>
 
