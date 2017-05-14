@@ -6,8 +6,16 @@
  * Time: 23:06
  */
 
+session_start();
+
 require_once 'inc/connection.inc.php';
-include 'tpl/index.html';
+
+if(empty($_SESSION)) {
+    include 'tpl/index.html';
+} else {
+    header('Location: uvod.php');
+}
+print_r($_SESSION);
 
 if(isset($_POST['login'])) {
     $password = md5($_POST['password']);
@@ -20,7 +28,6 @@ if(isset($_POST['login'])) {
     ");
 
     if (count($user=mysqli_fetch_assoc($query))) {
-        session_start();
         $_SESSION['id'] = $user['id'];
         $_SESSION['jmeno'] = $user['jmeno'];
         $_SESSION['nick'] = $user['nick'];
