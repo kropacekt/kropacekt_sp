@@ -13,6 +13,7 @@ $( function() {
         min: minCena,
         max: maxCena,
         values: [minCena, maxCena],
+        /*step: 10000,*/
 
         create: function (event, ui) {
             //$("input[name$='cenaOd']").val(minCena);

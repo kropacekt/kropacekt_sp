@@ -16,7 +16,7 @@
 <!-- Vlastní skripty -->
 <script src="tpl/js/script.ajax.js"></script>
 <script src="tpl/js/slider.js"></script>
-<script src="tpl/js/reloadForm.js"></script>
+<script src="tpl/js/filtrace.ajax.js"></script>
 
 <head>
     <meta charset="UTF-8">

@@ -1,6 +1,5 @@
 <div class="container">
-    <form id="filtrace" action="uvod.php?akce=filtrovat" method="post" >
-
+    <form id="filtrace" method="post">
         <div class="form-group row">
             <div class="col-sm-10">
                 <h1>Filtrace výrobků</h1>
@@ -64,9 +63,14 @@
 
         <div class="form-group row">
             <div class="offset-sm-2 col-sm-1">
-                <button name="filtrovat" type="submit" class="btn btn-primary">Vypsat výrobky</button>
+                <button type="submit" class="btn btn-primary">Vypsat výrobky</button>
             </div>
         </div>
 
+        <div id="vypisFiltrace"></div>
+
     </form>
+
+    <div class="modal"></div>
+
 </div>
