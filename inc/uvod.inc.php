@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <link rel="icon" href="tpl/img/favicon.png" type="image/png" sizes="16x16">
 
 <!-- Latest compiled and minified CSS -->
@@ -20,11 +20,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Úvodní stránka</title>
+    <title>Administrace</title>
 </head>
 <body>
     <div id="obal">
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-fixed-top navbar-inverse">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -35,7 +35,6 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">Administrace</a>
-                    <!--<p class="navbar-text"><img src="tpl/img/profile/<?php /*echo $id */?>.jpg" width="1%"></p>-->
                     <p class="navbar-text">Přihlášen jako <?php echo $jmeno ?></p>
                 </div>
 
