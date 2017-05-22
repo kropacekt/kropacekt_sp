@@ -8,7 +8,7 @@ $(function () {
     $("#filtrace").submit(function(event) {
         event.preventDefault(); //zablokuje poslani formu
         var serializedData = $(this).serialize();
-        console.log(serializedData);
+        //console.log(serializedData);
 
         $.ajax({
             url: "tpl/php/filtrace.ajax.php",

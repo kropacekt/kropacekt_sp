@@ -4,7 +4,7 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="tpl/uvod.css">
+<link rel="stylesheet" type="text/css" href="tpl//css/uvod.css">
 
 <!-- jQuery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,6 +17,7 @@
 <script src="tpl/js/script.ajax.js"></script>
 <script src="tpl/js/slider.js"></script>
 <script src="tpl/js/filtrace.ajax.js"></script>
+<script src="tpl/js/pridani.ajax.js"></script>
 
 <head>
     <meta charset="UTF-8">
@@ -24,7 +25,7 @@
 </head>
 <body>
     <div id="obal">
-        <nav class="navbar navbar-fixed-top navbar-inverse">
+        <nav class="navbar navbar-static-top navbar-inverse">
             <div class="container">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
@@ -43,8 +44,6 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="uvod.php">Domů</a></li>
                         <li><a href="uvod.php?akce=pridat">Přidat</a></li>
-                        <li><a href="uvod.php?akce=editovat">Editovat</a></li>
-                        <li><a href="uvod.php?akce=smazat">Smazat</a></li>
                         <li><a href="uvod.php?akce=filtrovat">Filtrovat</a></li>
                         <li><a href="uvod.php?akce=kontakt">Kontakt</a></li>
                         <li>

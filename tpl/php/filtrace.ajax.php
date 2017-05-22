@@ -10,16 +10,17 @@ require_once '../../inc/connection.inc.php';
 
 $typ = ($_POST['typ'] == "vse") ? "" : $_POST['typ'];
 $jednotky = ($_POST['jednotky'] == "vse") ? ("jednotky LIKE '%'") : ("jednotky = '".$_POST['jednotky']."'");
-$cenaOd = intval($_POST['cenaOd']);
-$cenaDo = intval($_POST['cenaDo']);
 
-// SQL Injection???? http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php
-$query = (mysqli_query($link, "SELECT id, nazev, jednotky, cena
+$cenaOd = intval(htmlspecialchars(mysqli_real_escape_string($link, $_POST['cenaOd'])));
+$cenaDo = intval(htmlspecialchars(mysqli_real_escape_string($link, $_POST['cenaDo'])));
+
+// SQL Injection mohlo byt reseno i takto -> http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php
+$query = mysqli_query($link, "SELECT id, nazev, jednotky, cena
                                             FROM zbozi
                                             WHERE nazev LIKE '$typ%'
                                             AND $jednotky
                                             AND cena BETWEEN $cenaOd AND $cenaDo
-                                            /*ORDER BY cena*/"));
+                                            /*ORDER BY cena*/");
 
 $data = '<div class="col-sm-2"></div>
           <div class="col-sm-8">

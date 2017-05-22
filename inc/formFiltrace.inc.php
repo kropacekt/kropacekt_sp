@@ -7,7 +7,7 @@
         </div>
 
         <div class="form-group row">
-            <label for="vyrobce" class="col-sm-2 col-form-label" >Typ:</label>
+            <label for="typ" class="col-sm-2 col-form-label" >Typ:</label>
             <div class="col-xs-3">
                 <select name="typ" class="form-control">
                     <option value="vse">vše</option>
@@ -50,7 +50,7 @@
             <div class="col-sm-10 ">
                 <div class="form-check col-xs-3">
                     <label for="cenaOd" class="col-form-label" >Cena od:</label>
-                    <input type="number" class="form-control" name="cenaOd" id="cenaOd" value="<?php echo isset($_POST['cenaOd']) ? $_POST['cenaOd'] : '' ?>">
+                    <input type="number" class="form-control" name="cenaOd" id="cenaOd">
                 </div>
 
                 <div class="form-check col-xs-3">
@@ -62,8 +62,14 @@
         </fieldset>
 
         <div class="form-group row">
-            <div class="offset-sm-2 col-sm-1">
+            <div class="col-sm-1">
                 <button type="submit" class="btn btn-primary">Vypsat výrobky</button>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-xs-1">
+                <button type="reset" class="btn btn-danger">Reset</button>
             </div>
         </div>
 

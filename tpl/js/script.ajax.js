@@ -6,16 +6,16 @@ $(function () {
     var inputNick = $("input[name$='nick']");
 
     $(inputNick).blur(function () {
-        console.log("ready");
+        //console.log("ready");
         if (inputNick.val()) {
-            console.log(inputNick.val());
+            //console.log(inputNick.val());
 
             $.ajax({
                 url: "tpl/php/script.ajax.php?nick=" + inputNick.val(),
                 dataType: "JSON",
 
                 success: function(data) {
-                    console.log("success");
+                    //console.log("success");
                     if(data) {
                         $("#user-exists").html("<p>Chystáte se přihlásit jako:</p> <p>" + data.jmeno + "</p>").removeClass("alert-danger").addClass("alert-info").show();
                         $("#profile-img").attr('src', 'tpl/img/profile/' + data.id + '.jpg'); //po dropzoně pořešit koncovku souboru! <----------------------------------------

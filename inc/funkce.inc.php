@@ -11,18 +11,14 @@ if(isset($_GET['akce'])) {
     $akce = $_GET['akce'];
 
     if($akce == "pridat") {
-        echo "Přidat záznam";
-        //include "tpl/formular.inc.php";
-    }
+        $query1 = mysqli_query($link, "SELECT DISTINCT(jednotky) FROM zbozi ORDER BY jednotky");
+        $jednotky = [];
 
-    if($akce == "editovat") {
-        echo "Editovat záznam";
-        //include "tpl/formular.inc.php";
-    }
+        while(($row=mysqli_fetch_array($query1))) {
+            $jednotky[] = $row["jednotky"];
+        }
 
-    if($akce == "smazat") {
-        echo "Smazat záznam";
-        //include "tpl/formular.inc.php";
+        include "inc/formPridani.inc.php";
     }
 
     if($akce == "filtrovat") {
@@ -40,12 +36,12 @@ if(isset($_GET['akce'])) {
             $typy[] = $row["typy"];
         }
 
-        include "inc/formular.inc.php";
+        include "inc/formFiltrace.inc.php";
     }
 
     if($akce == "kontakt") {
         echo "Kontakt";
-        //include "tpl/formular.inc.php";
+        //include "tpl/formFiltrace.inc.php";
     }
 
     if($akce == "odhlasit") {
