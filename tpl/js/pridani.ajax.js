@@ -15,7 +15,7 @@ $(function () {
             data: serializedData,
 
             success: function(data) {
-                console.log(data);
+                //console.log(data);
                 $(".kropihoAlertik").text("Výrobek byl úspěšně přidán do databáze.").removeClass("alert-danger").addClass("alert-success").show();
             },
 

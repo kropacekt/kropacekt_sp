@@ -16,8 +16,8 @@ $typ = htmlspecialchars($typ);
 $jednotky = htmlspecialchars($jednotky);
 $cena = intval(htmlspecialchars($cena));
 
-$query = mysqli_query($link, "INSERT INTO zbozi (nazev, jednotky, cena)
-                                     VALUES ('$typ', '$jednotky', $cena)");
+$query = mysqli_query($link, "INSERT INTO zbozi (nazev, jednotky, cena, smazano)
+                                     VALUES ('$typ', '$jednotky', $cena, '0')");
 
 if($query) {
     return true;

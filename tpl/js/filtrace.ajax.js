@@ -18,10 +18,20 @@ $(function () {
 
             //http://stackoverflow.com/questions/1964839/how-can-i-create-a-please-wait-loading-animation-using-jquery
             beforeSend: function() { $('.modal').show(); },
-            complete: function() { $('.modal').hide(); },
+
+            complete: function() {
+                $('.modal').hide();
+                tableEdit();
+            },
 
             success: function(data) {
-                $("#vypisFiltrace").html(data);
+                $("#vysledekFiltrace > tbody").html("");
+
+                $.each(data, function(index, vyrobek) {
+                    $('#vysledekFiltrace tbody').append("<tr><td>" + vyrobek.id + "</td><td>" + vyrobek.nazev + "</td><td>" + vyrobek.jednotky + "</td><td>" + vyrobek.cena + "</td></tr>");
+                });
+
+                $('#vypisFiltrace').show();
             },
 
             error: function(xhr, status) {

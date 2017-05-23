@@ -47,7 +47,7 @@
 
             <legend class="col-form-legend col-sm-2">Cenové rozpětí</legend>
 
-            <div class="col-sm-10 ">
+            <div class="col-sm-10">
                 <div class="form-check col-xs-3">
                     <label for="cenaOd" class="col-form-label" >Cena od:</label>
                     <input type="number" class="form-control" name="cenaOd" id="cenaOd">
@@ -73,9 +73,25 @@
             </div>
         </div>
 
-        <div id="vypisFiltrace"></div>
-
     </form>
+
+    <div id="vypisFiltrace"  class="col-sm-offset-1 col-xs-10" style="display: none;">
+
+        <table id="vysledekFiltrace" class="table table-responsive table-hover">
+
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Název</th>
+                    <th>Jednotky</th>
+                    <th>Cena</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+
+        </table>
+    </div>
 
     <div class="modal"></div>
 

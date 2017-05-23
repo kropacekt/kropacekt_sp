@@ -13,11 +13,16 @@
 <link rel="stylesheet" href="tpl/js/jquery-ui-1.12.1/jquery-ui.min.css">
 <script src="tpl/js/jquery-ui-1.12.1/jquery-ui.js"></script>
 
+<!-- jQuery Tabledit -->
+<script src="tpl/js/jquery-tabledit-1.2.3/jquery.tabledit.js"></script>
+
 <!-- Vlastní skripty -->
 <script src="tpl/js/script.ajax.js"></script>
 <script src="tpl/js/slider.js"></script>
 <script src="tpl/js/filtrace.ajax.js"></script>
 <script src="tpl/js/pridani.ajax.js"></script>
+<script src="tpl/js/edit.tableEdit.js"></script>
+
 
 <head>
     <meta charset="UTF-8">
@@ -49,14 +54,6 @@
                         <li>
                             <a class="btn btn-default btn-outline btn-circle" href="uvod.php?akce=odhlasit" data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1">Odhlásit</a>
                         </li>
-                    </ul>
-                    <ul class="collapse nav navbar-nav nav-collapse" id="nav-collapse1">
-                        <li><a href="#">Web design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">Graphic design</a></li>
-                        <li><a href="#">Print</a></li>
-                        <li><a href="#">Motion</a></li>
-                        <li><a href="#">Mobile apps</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container -->
