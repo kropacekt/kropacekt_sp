@@ -5,7 +5,7 @@
 /*https://api.jqueryui.com/slider/*/
 
 var minCena = 0;
-var maxCena = 541560; //tahat z dtb? dle meho zbytecne pracne
+var maxCena = 600000; //tahat z dtb? dle meho zbytecne pracne
 
 $( function() {
     $( "#slider" ).slider({

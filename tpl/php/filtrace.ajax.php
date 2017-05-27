@@ -14,6 +14,12 @@ $jednotky = ($_POST['jednotky'] == "vse") ? ("jednotky LIKE '%'") : ("jednotky =
 $cenaOd = intval(htmlspecialchars(mysqli_real_escape_string($link, $_POST['cenaOd'])));
 $cenaDo = intval(htmlspecialchars(mysqli_real_escape_string($link, $_POST['cenaDo'])));
 
+$serazeni = "";
+
+if(isset($_POST['serazeni'])) {
+    $serazeni = "ORDER BY cena ".$_POST['serazeni'];
+}
+
 // SQL Injection mohlo byt reseno i takto -> http://stackoverflow.com/questions/60174/how-can-i-prevent-sql-injection-in-php
 $query = mysqli_query($link, "SELECT id, nazev, jednotky, cena
                                             FROM zbozi
@@ -21,8 +27,7 @@ $query = mysqli_query($link, "SELECT id, nazev, jednotky, cena
                                             AND $jednotky
                                             AND cena BETWEEN $cenaOd AND $cenaDo
                                             AND smazano = '0'
-                                            /*ORDER BY cena*/");
-
+                                            $serazeni");
 
 $data = [];
 $i = 0;

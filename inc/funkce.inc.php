@@ -39,14 +39,11 @@ if(isset($_GET['akce'])) {
         include "inc/formFiltrace.inc.php";
     }
 
-    if($akce == "kontakt") {
-        echo "Kontakt";
-        //include "tpl/formFiltrace.inc.php";
-    }
-
     if($akce == "odhlasit") {
         session_unset();
         session_destroy();
         header("Location: index.php");
     }
+} else {
+    include "inc/homepage.inc.php";
 }

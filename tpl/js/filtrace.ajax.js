@@ -26,6 +26,8 @@ $(function () {
 
                 //defaultne se pres tabledit nastavuje vsem inputum type="text", timto kodem osetruji, aby cena byla zadana jako cislo
                 $('.tabledit-input').each(function() {
+                    $(this).prop("required", true); //nepomuze, neni to form
+
                     if($(this).attr('name') === "cena") {
                          $(this).attr('type', 'number');
                     }

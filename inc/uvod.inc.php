@@ -16,7 +16,7 @@
 <!-- jQuery Tabledit -->
 <script src="tpl/js/jquery-tabledit-1.2.3/jquery.tabledit.js"></script>
 
-<!-- Vlastní skripty -->
+<!-- Vlastni skripty -->
 <script src="tpl/js/script.ajax.js"></script>
 <script src="tpl/js/slider.js"></script>
 <script src="tpl/js/filtrace.ajax.js"></script>
@@ -50,7 +50,6 @@
                         <li><a href="uvod.php">Domů</a></li>
                         <li><a href="uvod.php?akce=pridat">Přidat</a></li>
                         <li><a href="uvod.php?akce=filtrovat">Filtrovat</a></li>
-                        <li><a href="uvod.php?akce=kontakt">Kontakt</a></li>
                         <li>
                             <a class="btn btn-default btn-outline btn-circle" href="uvod.php?akce=odhlasit" data-toggle="collapse" href="#nav-collapse1" aria-expanded="false" aria-controls="nav-collapse1">Odhlásit</a>
                         </li>

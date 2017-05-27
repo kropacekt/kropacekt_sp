@@ -57,9 +57,23 @@
                     <label for="cenaDo" class="col-form-label" >Cena do:</label>
                     <input type="number" class="form-control" name="cenaDo" id="cenaDo">
                 </div>
+
             </div>
 
         </fieldset>
+
+        <div class="form-group row">
+            <label for="serazeni" class="col-sm-2 col-form-label">Seřadit podle ceny:</label>
+
+            <div class="col-xs-3">
+                <label><input type="radio" name="serazeni" value="asc"> Vzestupně</label>
+            </div>
+
+            <div class="col-xs-3">
+                <label><input type="radio" name="serazeni" value="desc"> Sestupně</label>
+            </div>
+
+        </div>
 
         <div class="form-group row">
             <div class="col-sm-1">
@@ -75,7 +89,7 @@
 
     </form>
 
-    <div id="vypisFiltrace"  class="col-sm-offset-1 col-xs-10" style="display: none;">
+    <div id="vypisFiltrace" class="col-sm-offset-1 col-xs-10" style="display: none;">
 
         <table id="vysledekFiltrace" class="table table-responsive table-hover">
 
